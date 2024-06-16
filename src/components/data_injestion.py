@@ -6,13 +6,13 @@ from src.exceptions import CustomException
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
 
-
+from src.components.data_transformer import Datatransform
 
 @dataclass
 class DataInjestionConfig:
-    train_data_path = os.path.join("data", "train.csv")
-    test_data_path = os.path.join("data", "test.csv")
-    raw_data_path = os.path.join("data", "raw.csv")
+    train_data_path = os.path.join("data/data_injestion", "train.csv")
+    test_data_path = os.path.join("data/data_injestion", "test.csv")
+    raw_data_path = os.path.join("data/data_injestion", "raw.csv")
 
 class DataInjestion:
     def __init__(self) -> None:
@@ -51,6 +51,8 @@ class DataInjestion:
 if __name__== "__main__":
 
     injestion = DataInjestion()
-    injestion.initiate_data_injestion("./raw_data_source/Electric_Vehicle_Population_Data.csv")
+    train_path, test_path = injestion.initiate_data_injestion("./data/cleandata.csv")
 
+    transformation = Datatransform()
+    transformation.initiate_data_transformation(train_path=train_path, test_path=test_path)
 # src/components/data_injestion.py
