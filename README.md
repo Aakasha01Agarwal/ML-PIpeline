@@ -19,3 +19,7 @@ End to End ML Pipeline project
 2) Also splitted the data into train and test dataset for further use.
 3) Everything is done in try-catch block using my Custom Exception Handler.
    
+## Phase 4
+
+1) Implemented the data_transformer.py file for doing cleaning operations on the data and make it in a format that is ready-to-use for machine learning algorithms.
+2) 
