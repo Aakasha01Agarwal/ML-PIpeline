@@ -10,4 +10,12 @@ End to End ML Pipeline project
 ## Phase 2
 
 1) Created the logger.py file which will help me maintain a log of anything/everything I want to.
-2) Created an exception.py file, in which I implemented a CustomException class which will give me a all the details of the error caught in the try block. 
+2) Created an exception.py file, in which I implemented a CustomException class which will give me a all the details of the error caught in the try block.
+
+
+## Phase 3
+
+1) Implemented data_injestion.py for getting data from local computer and storing it inside the ./data folder.
+2) Also splitted the data into train and test dataset for further use.
+3) Everything is done in try-catch block using my Custom Exception Handler.
+   
